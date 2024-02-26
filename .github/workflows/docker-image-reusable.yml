@@ -27,5 +27,5 @@ jobs:
         with:
           context: .
           file: "./${{ inputs.imagename }}/Dockerfile"
-          tags: "zerosource/dojoS3import-${{ inputs.imagename }}:latest"
+          tags: "zerosource/dojo-s3import-${{ inputs.imagename }}:latest"
 

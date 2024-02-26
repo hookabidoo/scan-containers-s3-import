@@ -1,6 +1,7 @@
 name: build-and-push-docker-images-all
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - "main"
