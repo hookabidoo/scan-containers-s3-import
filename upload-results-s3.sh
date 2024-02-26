@@ -1,6 +1,6 @@
 #!/bin/sh
 # set LAMBDA_URL="https://123abcde52.execute-api.ap-southeast-2.amazonaws.com/dev"
-# set APP_ID=1234-0abcdefce49131f45739a
+# set APP_ID=1234-0abcdefce49131f457390
 TMPFILE=$(mktemp)
 SCANFILE="$1"
 curl -k -o "$TMPFILE" -X POST -H 'content-type: application/json'  -d '{"app_id":"'$APP_ID'","ext":"sarif"}' $LAMBDA_URL
