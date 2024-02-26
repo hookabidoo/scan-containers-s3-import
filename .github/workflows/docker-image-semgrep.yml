@@ -1,0 +1,15 @@
+name: build-and-push-docker-images-semgrep
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - 'semgrep/**'
+
+jobs:
+  call-workflow-passing-data:
+    uses: ./.github/workflows/docker-image-reusable.yml@main
+    with:
+      imagename: semgrep
+    secrets: inherit

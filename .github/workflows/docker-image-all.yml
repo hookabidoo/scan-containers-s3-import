@@ -1,0 +1,27 @@
+name: build-and-push-docker-images-all
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - 'upload-results-s3.sh'
+
+jobs:
+  call-workflow-passing-data-gitleaks:
+    uses: ./.github/workflows/docker-image-reusable.yml@main
+    with:
+      imagename: gitleaks
+    secrets: inherit
+
+  call-workflow-passing-data-semgrep:
+    uses: ./.github/workflows/docker-image-reusable.yml@main
+    with:
+      imagename: semgrep
+    secrets: inherit
+
+  call-workflow-passing-data-trivy:
+    uses: ./.github/workflows/docker-image-reusable.yml@main
+    with:
+      imagename: trivy
+    secrets: inherit
