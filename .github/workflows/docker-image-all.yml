@@ -9,19 +9,19 @@ on:
 
 jobs:
   call-workflow-passing-data-gitleaks:
-    uses: ./.github/workflows/docker-image-reusable.yml@main
+    uses: ./.github/workflows/docker-image-reusable.yml
     with:
       imagename: gitleaks
     secrets: inherit
 
   call-workflow-passing-data-semgrep:
-    uses: ./.github/workflows/docker-image-reusable.yml@main
+    uses: ./.github/workflows/docker-image-reusable.yml
     with:
       imagename: semgrep
     secrets: inherit
 
   call-workflow-passing-data-trivy:
-    uses: ./.github/workflows/docker-image-reusable.yml@main
+    uses: ./.github/workflows/docker-image-reusable.yml
     with:
       imagename: trivy
     secrets: inherit

@@ -9,7 +9,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: ./.github/workflows/docker-image-reusable.yml@main
+    uses: ./.github/workflows/docker-image-reusable.yml
     with:
       imagename: gitleaks
     secrets: inherit
