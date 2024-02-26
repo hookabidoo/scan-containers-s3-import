@@ -6,7 +6,6 @@ on:
       imagename:
         required: true
         type: string
-    secrets: inherit
 
 jobs:
   docker:
