@@ -1,0 +1,15 @@
+name: build-and-push-docker-images-github-dependabot-and-dependency-graph
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - 'github-dependabot-and-dependency-graph/**'
+
+jobs:
+  call-workflow-passing-data:
+    uses: ./.github/workflows/docker-image-reusable.yml
+    with:
+      imagename: github-dependabot-and-dependency-graph
+    secrets: inherit
