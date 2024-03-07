@@ -5,11 +5,11 @@ on:
     branches:
       - "main"
     paths:
-      - 'github-dependabot-and-dependency-graph/**'
+      - 'github-ddt/**'
 
 jobs:
   call-workflow-passing-data:
     uses: ./.github/workflows/docker-image-reusable.yml
     with:
-      imagename: github-dependabot-and-dependency-graph
+      imagename: github-ddt
     secrets: inherit
