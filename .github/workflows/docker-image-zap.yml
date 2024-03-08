@@ -5,11 +5,11 @@ on:
     branches:
       - "main"
     paths:
-      - 'zap-proxy/**'
+      - 'zap/**'
 
 jobs:
   call-workflow-passing-data:
     uses: ./.github/workflows/docker-image-reusable.yml
     with:
-      imagename: zap-proxy
+      imagename: zap
     secrets: inherit
