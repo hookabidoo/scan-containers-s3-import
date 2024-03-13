@@ -26,3 +26,15 @@ jobs:
     with:
       imagename: trivy
     secrets: inherit
+
+  call-workflow-passing-data-zap:
+    uses: ./.github/workflows/docker-image-reusable.yml
+    with:
+      imagename: zap
+    secrets: inherit
+
+  call-workflow-passing-data-github_ddt:
+    uses: ./.github/workflows/docker-image-reusable.yml
+    with:
+      imagename: github_ddt
+    secrets: inherit
