@@ -33,8 +33,8 @@ jobs:
       imagename: zap
     secrets: inherit
 
-  call-workflow-passing-data-github_ddt:
+  call-workflow-passing-data-github-ddt:
     uses: ./.github/workflows/docker-image-reusable.yml
     with:
-      imagename: github_ddt
+      imagename: github-ddt
     secrets: inherit
