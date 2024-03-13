@@ -5,11 +5,11 @@ on:
     branches:
       - "main"
     paths:
-      - 'github-ddt/**'
+      - 'github_ddt/**'
 
 jobs:
   call-workflow-passing-data:
     uses: ./.github/workflows/docker-image-reusable.yml
     with:
-      imagename: github-ddt
+      imagename: github_ddt
     secrets: inherit
