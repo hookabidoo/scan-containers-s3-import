@@ -1,4 +1,4 @@
-name: build-and-push-docker-images-github-dependabot-and-dependency-graph
+name: build-and-push-docker-images-github-ddt
 
 on:
   push:

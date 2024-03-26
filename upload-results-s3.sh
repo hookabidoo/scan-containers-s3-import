@@ -3,7 +3,8 @@
 # set APP_ID=1234-0abcdefce49131f457393
 TMPFILE=$(mktemp)
 SCANFILE="$1"
-curl -k -o "$TMPFILE" -X POST -H 'content-type: application/json'  -d '{"app_id":"'$APP_ID'","ext":"sarif"}' $LAMBDA_URL
+FILE_EXTENSION="${SCANFILE##*.}" 
+curl -k -o "$TMPFILE" -X POST -H 'content-type: application/json'  -d '{"app_id":"'$APP_ID'","ext":"'$FILE_EXTENSION'"}' $LAMBDA_URL
 cat $TMPFILE
 URL=`jq -r ".url" "$TMPFILE"`
 KEY=`jq -r ".fields.key" "$TMPFILE"`
